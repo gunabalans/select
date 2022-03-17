@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>data table from Netkathir.com</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main class="container">
+      <div
+        class="d-flex justify-content-between p-3 my-3 text-white bg-purple rounded shadow-sm"
+        style="background-color: #eef8ed"
+      >
+        <img
+          class="me-3"
+          src="https://www.netkathir.com/images/logo.png"
+          alt=""
+          width="200"
+          height="65"
+        />
+      </div>
+
+      <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <div
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-start;
+          "
+        >
+          <input data-id=""
+            id="country"
+            type="text"
+            class="form-control"
+            placeholder="Country Name"
+          />
+          <div id="selectedList"></div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./select.js"></script>
+
+    <script>
+      //call paging onload
+      Netkathir.start({
+        tableId: "#data-table1",
+        getPageSizeFrom: "#pagesize",
+        paginationContainer: "#pagination",
+      });
+    </script>
+  </body>
+</html>
