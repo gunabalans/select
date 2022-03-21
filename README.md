@@ -1,8 +1,4 @@
 # select
 A simple select box for html forms
 
-# to to list 
-    1. search filter on change - done
-    2. add onclick="Nk.s(this)" programatically to all li
-    3. down button or tab to select choices
-
+![image](https://user-images.githubusercontent.com/11496339/159176527-1b2ec6b0-805f-4571-8211-0b76e75f1e32.png)
