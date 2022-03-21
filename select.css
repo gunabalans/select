@@ -1,3 +1,7 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 .selectBox {
   display: flex;
   flex-direction: column;
@@ -7,7 +11,7 @@
   width: 200px;
 }
 
-#selectedList {
+.selectedList {
   -webkit-transition: max-height 2s;
   -moz-transition: max-height 2s;
   -ms-transition: max-height 2s;
@@ -18,15 +22,18 @@
   scrollbar-width: thin;
   /* "height: 0" not work with css transitions */
   max-height: 0;
-  width: 200px;
+  width: 100%;
   border-radius: 0.25rem;
 }
 
-#selectedList ul {
+.selectedList ul {
   margin-top: 0;
   margin-bottom: 0.25rem;
   list-style-type: none;
   padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 /* css for input text box; if required */
@@ -46,4 +53,8 @@
   appearance: none;
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+li:focus {
+  background: lightgreen;
 }
