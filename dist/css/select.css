@@ -3,15 +3,14 @@
 }
 
 .selectBox {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 5px;
-  width: 200px;
+  position: relative;
+  width: 300px;
 }
 
 .selectedList {
+  position: absolute;
+  top:40px;
+  left: 0px;
   -webkit-transition: max-height 2s;
   -moz-transition: max-height 2s;
   -ms-transition: max-height 2s;
@@ -24,13 +23,14 @@
   max-height: 0;
   width: 100%;
   border-radius: 0.25rem;
+  z-index: 10;
 }
 
 .selectedList ul {
   margin-top: 0;
   margin-bottom: 0.25rem;
   list-style-type: none;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -56,5 +56,13 @@
 }
 
 li:focus {
-  background: lightgreen;
+  background: rgb(220, 252, 220);
+}
+
+.b{
+  display: block;
+}
+
+.n{
+  display: none;
 }

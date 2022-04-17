@@ -2,9 +2,25 @@
     "name": "netkathir/select",
     "description": "A simple select box",
     "keywords": ["select","html","javascript"],
-    "type": "project",
+    "type": "component",
     "main": "select.js",
     "author": "gunabalans@yahoo.com",
     "homepage":"https://www.netkathir.com",
-    "license": "MIT"
+    "license": "MIT",
+    "extra": {
+        "component": {
+          "scripts": [
+            "dist/js/select.js"
+          ],
+          "styles": [
+            "dist/css/select.css"
+          ],
+          "files": [
+            "dist/js/select.js",
+            "dist/css/select.css"
+          ]
+        }
+      }
 }
+
+

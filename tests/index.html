@@ -12,7 +12,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./select.css" />
+    <link rel="stylesheet" href="../dist/css/select.css" />
   </head>
   <body>
     <main class="container">
@@ -31,14 +31,7 @@
 
       <div class="my-3 p-3 bg-body rounded shadow-sm">
         <div class="selectBox">
-          <input
-            id="nklist"
-            type="text"
-            class="form-control"
-            onfocus="Nk.show()"
-            tabindex="1"
-            onkeyup="Nk.ft(this)"
-          />
+          <input id="nklist" type="text" class="selectInput" tabindex="1" />
           <div class="selectedList" id="listid">
             <ul tabindex="2">
               <li value="Afganistan">Afghanistan</li>
@@ -299,14 +292,14 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
-    <script src="./select.js"></script>
+    <script src="../dist/js/select.js"></script>
 
     <script>
       Nk.start({
         selectboxid: "#nklist",
         selectListid: "#listid",
         placeholder: "Select ..",
-        maxHeight: "150px"
+        maxHeight: "150px",
       });
     </script>
   </body>
