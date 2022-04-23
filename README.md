@@ -3,7 +3,7 @@
 A simple select box for html forms
 
 # Example
-
+```code
 <link rel="stylesheet" href="../dist/css/select.css" />
     <div class="selectBox">
           <input id="nklist" type="text" class="selectInput" tabindex="1" />
@@ -27,7 +27,7 @@ A simple select box for html forms
         maxHeight: "150px",
       });
 </script>
-
-# screen shot
+```
+# screenshot
 
 ![image](https://user-images.githubusercontent.com/11496339/159176527-1b2ec6b0-805f-4571-8211-0b76e75f1e32.png)
