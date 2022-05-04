@@ -26,19 +26,15 @@ const Nk = {
         sb = null;
 
         //add onclick event to all ul > li
-        this.addeventToList();    
-    },
-
-    addeventToList : function() {
         let elets = document.querySelectorAll(this.selectListid + " ul li");
         for (const iterator of elets) {
             iterator.setAttribute("onclick", "Nk.s(this);Nk.hide()");
             iterator.setAttribute("onkeyup", "Nk.s2(event)");
             iterator.setAttribute("tabindex", 1);
-            iterator.setAttribute("class", "b");
+            iterator.setAttribute("class", "s");
         }
         elets = null;
-    },       
+    },
 
     show: function () {
         let el = document.querySelector(this.selectListid)
@@ -138,3 +134,4 @@ const Nk = {
         filter = null;
     }
 };
+export default Nk;
