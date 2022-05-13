@@ -26,10 +26,10 @@ const Nk = {
         sb = null;
 
         //add onclick event to all ul > li
-        this.addeventToList();    
+        this.addeventToList();
     },
 
-    addeventToList : function() {
+    addeventToList: function () {
         let elets = document.querySelectorAll(this.selectListid + " ul li");
         for (const iterator of elets) {
             iterator.setAttribute("onclick", "Nk.s(this);Nk.hide()");
@@ -38,7 +38,7 @@ const Nk = {
             iterator.setAttribute("class", "b");
         }
         elets = null;
-    },       
+    },
 
     show: function () {
         let el = document.querySelector(this.selectListid)
@@ -136,5 +136,53 @@ const Nk = {
         lis = null;
         li = null;
         filter = null;
+    },
+
+    async fetchData(url, data, method = 'POST', json = true) {
+
+        try {
+            if (json) {
+                const content = {
+                    method: method,
+                    body: JSON.stringify(data),
+                    headers: {
+                        'Content-type': 'application/json; charset=UTF-8'
+                    }
+                }
+            } else {
+                //like query string examle: body: 'name=gbs&city=karaikal',
+                const content = {
+                    method: method,
+                    body: data,
+                    headers: {
+                        'Content-type': 'application/x-www-form-urlencoded'
+                    }
+                }
+            }
+
+            var response = await fetch(url, content);
+
+            if (response.status == 200) {
+                if (json) {
+                    let data = await response.json();
+                } else {
+                    let data = await response.text();
+                }
+                return data;
+            } else {
+                console.log(response.status)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    },
+    async makeRequest(url, data, method = 'POST', json = true) {
+        setTimeout(function (url) {
+            let val = document.getElementById(selectboxid).value;
+            
+            let queryString = 'q=' + encodeURI(val);
+            this.fetchData(url, queryString, method, false)
+        }, 300);;//delay request by 500 milli second 
     }
+
 };
